@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos-grid.css">
+    <title>contacto</title>
+</head>
+<body>
+    <header>
+        <a class="header__icono" href="../index.html"><img src="../images/ab-logo.jpg" class="header__icon" alt="logo"></a>
+        <h1 class="header__titulo texto--grande textoLiviano"><a href="../index.html">ABarcelo Propiedades</a></h1>
+        <nav class="header__nav navbar navbar-light navbar-expand-lg">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+            <ul>
+                <li><a href="../index.html"><h4>Inicio</h4></a></li>
+                <li><a href="quienes_somos.html"><h4>Quienes Somos</h4></a></li>
+                <li><a href="propiedades.html"><h4>Propiedades</h4></a>
+                    <ul>
+                        <li><a href="green_village_003.html">Edificio Green Village</a></li>
+                        <li><a href="parquemar_1304.html">Edificio Parquemar</a></li>
+                        <li><a href="stradivarius_302.html">Edificio Stradivarius</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacto.html"><h4>Contacto</h4></a></li>
+                <li><a href="busca_propiedad.html"><h3>Busca tu Propiedad</h3></a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="section section--contacto">
+        <div class="container">
+        <h2>Contacto</h2>
+        <form class="texto--formulario textoCentrado" action="gracias.php" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="form-group">
+            <label for="nombre_apellido">Nombre Completo:</label>
+            <input type="text" name="nombre_apellido">
+            </div>
+            <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="text" name="email">
+            </div>
+            <h5>Operación:</h5>
+            <select name="operacion">
+                <option value="0" disabled selected>Elige una opción</option>
+                <option value="comp/vent">Compra o Venta</option>
+                <option value="alquiler">Alquiler</option>
+                <option value="otro">Otro</option>
+            </select>
+            <div class="form-group">
+                <label for="comentarios">Comentarios</label>
+                <textarea class="form-control" id="comentarios" rows="4"></textarea>
+            </div>
+            <p>Desea recibir nuestras novedades?</p>
+            Si
+            <input type="checkbox" name="si" value="1">
+            <br>
+            <button type="reset" class="btn btn-dark">Limpiar</button>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+        </form>
+        </div>
+    </section>
+    <footer id="pie">
+        <div class="footer__titulosPie">
+        <a href="contacto.html"><h5>Contacto</h5></a>
+        <h5>Copyright</h5>
+        <h5>Redes Sociales</h5>
+        </div>
+        <div class="footer__iconoSocial">
+            <a href="https://www.facebook.com/"><img src="../images/fb-logo.jpg" height="50" width="50" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="../images/ig-logo.jpg" height="50" width="50" alt="Instagram"></a>
+            <a href="https://twitter.com/"><img src="../images/tw-logo.jpg" height="50" width="50" alt="Twitter"></a>
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
