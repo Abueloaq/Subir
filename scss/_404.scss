@@ -2,4 +2,20 @@ body.broken {
     height: 100vh;
     display: flex;
     justify-content: space-between;
+    row-gap: 0px;
+}
+section.section--404 {
+    background-color: $naranja-puerta;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+img.img--404 {
+    width: 80%;
+}
+@media only screen and (min-width: 992px) {
+    img.img--404 {
+        width: 840px;
+    }
 }
