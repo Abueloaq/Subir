@@ -17,7 +17,7 @@ h1 {
 h2 {
     color: $celeste;
     text-align: center;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 300;
 }
 h3 {
@@ -271,6 +271,12 @@ article {
         }
         
     }
+    h2 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 3rem;
+    }
     .texto--grande {
         font-size: 5rem;
     }
@@ -375,6 +381,12 @@ article {
         text-align: left;
         display: inline-block;
         list-style-position: inside;
+    }
+    h2 {
+        font-size: 5rem;
+    }
+    h3 {
+        font-size: 4rem;
     }
     .texto--grande {
         font-size: 8rem;
