@@ -17,7 +17,7 @@ h1 {
 h2 {
   color: #0091A8;
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 300; }
 
 h3 {
@@ -251,6 +251,10 @@ article {
       background-color: #ffecc3; }
     nav ul li:hover ul {
       display: block; }
+  h2 {
+    font-size: 4rem; }
+  h3 {
+    font-size: 3rem; }
   .texto--grande {
     font-size: 5rem; }
   img.imgChica {
@@ -328,6 +332,10 @@ article {
     text-align: left;
     display: inline-block;
     list-style-position: inside; }
+  h2 {
+    font-size: 5rem; }
+  h3 {
+    font-size: 4rem; }
   .texto--grande {
     font-size: 8rem; }
   img.imgChica {
