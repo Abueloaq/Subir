@@ -85,6 +85,12 @@ nav ul {
 span {
   display: block; }
 
+video.video--mobile {
+  display: block; }
+
+video.video--lg {
+  display: none; }
+
 ul.listaDecorada,
 ol.listaDecorada {
   list-style: none;
@@ -258,7 +264,11 @@ article {
   .texto--grande {
     font-size: 5rem; }
   img.imgChica {
-    width: 450px; } }
+    width: 450px; }
+  video.video--mobile {
+    display: none; }
+  video.video--lg {
+    display: block; } }
 
 @media only screen and (min-width: 992px) {
   @keyframes entradaTitulo {
