@@ -40,16 +40,14 @@ body {
     display: flex;
     flex-flow: column nowrap;
     row-gap: 1.5rem;
-    background-image: linear-gradient(to bottom, rgb(245, 245, 245) 0%, rgb(201, 201, 201) 100%);
+    background-image: linear-gradient(to bottom, $blanco 0%, rgb(235, 235, 235) 100%);
     background-size: contain;
 }
 header {
     width: 100%;
     display: grid;
     grid-template-areas:
-     ".  icono  ."
-     "titulo titulo titulo"
-     "nav nav nav";
+     "icono titulo nav";
     background-color: $naranja-claro;
     h1.header__titulo {
         grid-area: titulo;
@@ -58,7 +56,7 @@ header {
     }
     a.header__icono {
         grid-area: icono;
-        align-self: inherit;
+        align-self: center;
         padding:0.5rem;
     }
     nav.header__nav {
@@ -98,6 +96,9 @@ nav {
 span {
     display: block;
 }
+a.icono--nav {
+    padding-left: 2rem;
+}
 video.video--mobile {
     display: block;
 }
@@ -112,6 +113,7 @@ ol.listaDecorada {
 ul.listaDecorada li::before,
 ol.listaDecorada li::before{
     content: "\00BB";
+    font-size: 2rem;
 }
 div.prop {
     padding-top: 1.5rem;
@@ -138,19 +140,16 @@ section.section--contacto {
 section.section--welc {
     padding: 0;
 }
-img.bordesRedondeados {
-    border-radius: 15px;
-}
 img.imgChica {
     width: 90vw;
 }
 img.header__icon {
-    width: 90px;
+    width: 40px;
 }
 $textos:(
     formulario: 1.5rem,
     lectura: 2rem,
-    grande: 4rem
+    grande: 2.5rem
 );
 @each $texto, $size in $textos {
     .texto--#{$texto}{
@@ -223,7 +222,8 @@ article {
     background-position-y: 1rem;
 }
 #lista-o {
-    font-weight: bold;
+    font-weight: 300;
+    font-size: 2rem;
     color: $marron;
 }
 @media only screen and (min-width:576px) {
@@ -231,11 +231,13 @@ article {
         width: 100%;
         display: grid;
         grid-template-areas:
-         "icono titulo  titulo"
-         "nav  nav  nav";
+         "icono titulo  nav";
         grid-template-columns: 100px auto auto;
         align-content: space-evenly;
         background-color: $naranja-claro;
+        a.header__icono {
+            grid-area: icono;
+        }
         h1.header__titulo {
             grid-area: titulo;
             text-align: left;
@@ -284,7 +286,10 @@ article {
         font-size: 3rem;
     }
     .texto--grande {
-        font-size: 5rem;
+        font-size: 4.5rem;
+    }
+    img.header__icon {
+        width: 90px;
     }
     img.imgChica {
         width: 450px;
@@ -294,6 +299,9 @@ article {
     }
     video.video--lg {
         display: block;
+    }
+    a.icono--nav {
+        display: none;
     }
 }
 @media only screen and (min-width: 992px) {

@@ -40,13 +40,13 @@ body {
   display: flex;
   flex-flow: column nowrap;
   row-gap: 1.5rem;
-  background-image: linear-gradient(to bottom, whitesmoke 0%, #c9c9c9 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, #ebebeb 100%);
   background-size: contain; }
 
 header {
   width: 100%;
   display: grid;
-  grid-template-areas: ".  icono  ." "titulo titulo titulo" "nav nav nav";
+  grid-template-areas: "icono titulo nav";
   background-color: #fdd4b9; }
   header h1.header__titulo {
     grid-area: titulo;
@@ -54,7 +54,7 @@ header {
     padding: 0.5rem; }
   header a.header__icono {
     grid-area: icono;
-    align-self: inherit;
+    align-self: center;
     padding: 0.5rem; }
   header nav.header__nav {
     grid-area: nav;
@@ -85,6 +85,9 @@ nav ul {
 span {
   display: block; }
 
+a.icono--nav {
+  padding-left: 2rem; }
+
 video.video--mobile {
   display: block; }
 
@@ -98,7 +101,8 @@ ol.listaDecorada {
 
 ul.listaDecorada li::before,
 ol.listaDecorada li::before {
-  content: "\00BB"; }
+  content: "\00BB";
+  font-size: 2rem; }
 
 div.prop {
   padding-top: 1.5rem; }
@@ -125,14 +129,11 @@ section.section--contacto {
 section.section--welc {
   padding: 0; }
 
-img.bordesRedondeados {
-  border-radius: 15px; }
-
 img.imgChica {
   width: 90vw; }
 
 img.header__icon {
-  width: 90px; }
+  width: 40px; }
 
 .texto--formulario {
   font-size: 1.5rem; }
@@ -141,7 +142,7 @@ img.header__icon {
   font-size: 2rem; }
 
 .texto--grande {
-  font-size: 4rem; }
+  font-size: 2.5rem; }
 
 .btn-naranja {
   background-color: #F5842A; }
@@ -215,17 +216,20 @@ article {
   background-position-y: 1rem; }
 
 #lista-o {
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 2rem;
   color: #792600; }
 
 @media only screen and (min-width: 576px) {
   header {
     width: 100%;
     display: grid;
-    grid-template-areas: "icono titulo  titulo" "nav  nav  nav";
+    grid-template-areas: "icono titulo  nav";
     grid-template-columns: 100px auto auto;
     align-content: space-evenly;
     background-color: #fdd4b9; }
+    header a.header__icono {
+      grid-area: icono; }
     header h1.header__titulo {
       grid-area: titulo;
       text-align: left;
@@ -262,13 +266,17 @@ article {
   h3 {
     font-size: 3rem; }
   .texto--grande {
-    font-size: 5rem; }
+    font-size: 4.5rem; }
+  img.header__icon {
+    width: 90px; }
   img.imgChica {
     width: 450px; }
   video.video--mobile {
     display: none; }
   video.video--lg {
-    display: block; } }
+    display: block; }
+  a.icono--nav {
+    display: none; } }
 
 @media only screen and (min-width: 992px) {
   @keyframes entradaTitulo {
