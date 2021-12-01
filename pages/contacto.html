@@ -34,15 +34,21 @@
                     </ul>
                 </li>
                 <li><a href="contacto.html"><h4>Contacto</h4></a></li>
-                <li><a href="busca_propiedad.html"><h4 class="textoPesado">Busca tu Propiedad</h4></a></li>
+                <li class="busca"><a href="busca_propiedad.html"><h4 class="textoPesado">Busca tu Propiedad</h4></a></li>
             </ul>
             </div>
         </nav>
     </header>
     <section class="section section--contacto">
-        <div class="container">
+        <div class="div--contacto--side">
+            <h3>ABarcelo Propiedades</h3>
+            <p class="texto--lectura">42263269</p>
+            <p class="texto--lectura">contacto@abarcelo.com.uy</p>
+            <a href="https://goo.gl/maps/Xd8fV5ADzcyzi2qa6"><img class="img--ubi" src="../images/abarcelo-ubi.jpg"></a>
+        </div>
+        <div class="container-lg div--contacto">
         <h2>Contacto</h2>
-        <form class="texto--formulario textoCentrado" action="gracias.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <form class="texto--formulario form--contacto textoCentrado" action="gracias.php" method="POST" enctype="application/x-www-form-urlencoded">
             <div class="form-group">
             <label for="nombre_apellido">Nombre Completo:</label>
             <input type="text" name="nombre_apellido">
@@ -52,22 +58,25 @@
             <input type="text" name="email">
             </div>
             <h5>Operación:</h5>
-            <select name="operacion">
+            <select name="operacion" class="select--operacion">
                 <option value="0" disabled selected>Elige una opción</option>
                 <option value="comp/vent">Compra o Venta</option>
                 <option value="alquiler">Alquiler</option>
                 <option value="otro">Otro</option>
             </select>
-            <div class="form-group">
+            <div class="form-group div--texto">
                 <label for="comentarios">Comentarios</label>
-                <textarea class="form-control" id="comentarios" rows="4"></textarea>
+                <textarea class="textarea--contacto form-control" id="comentarios" rows="8"></textarea>
             </div>
+            <div>
             <p>Desea recibir nuestras novedades?</p>
             Si
             <input type="checkbox" name="si" value="1">
-            <br>
-            <button type="reset" class="btn btn-dark">Limpiar</button>
-            <button type="submit" class="btn btn-dark">Enviar</button>
+            </div>
+            <div>
+            <button type="reset" class="btn btn-naranja btn-lectura">Limpiar</button>
+            <button type="submit" class="btn btn-naranja btn-lectura">Enviar</button>
+            </div>
         </form>
         </div>
     </section>

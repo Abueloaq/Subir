@@ -104,6 +104,9 @@ ol.listaDecorada li::before {
   content: "\00BB";
   font-size: 2rem; }
 
+li.busca {
+  background-color: #ebebeb; }
+
 div.prop {
   padding-top: 1.5rem; }
 
@@ -122,9 +125,6 @@ section.section--propiedades {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; }
-
-section.section--contacto {
-  padding: 1rem 1rem 25rem; }
 
 section.section--welc {
   padding: 0; }
@@ -289,7 +289,7 @@ article {
   header {
     width: 100%;
     display: grid;
-    grid-template-areas: "icono titulo  ." ".  nav  nav";
+    grid-template-areas: "icono titulo  ." "nav  nav  nav";
     grid-template-columns: 100px auto auto;
     align-content: space-evenly;
     background-color: #fdd4b9; }
@@ -309,7 +309,7 @@ article {
     nav ul li {
       display: inline-block;
       position: relative;
-      width: 160px;
+      width: 195px;
       padding: 1rem 0.5rem;
       background-color: #b8b8b8;
       border: 3px solid #fdd4b9;
@@ -360,6 +360,44 @@ article {
     font-size: 8rem; }
   img.imgChica {
     width: 400px; } }
+
+button.btn-lectura {
+  font-size: 2rem; }
+
+section.section--contacto {
+  padding: 1rem 1rem;
+  display: flex; }
+
+div.div--contacto {
+  max-width: 50%;
+  padding: 1rem;
+  order: 1; }
+
+div.div--contacto--side {
+  max-width: 50%;
+  padding: 1rem;
+  border-left: 1px #F5842A;
+  order: 2; }
+
+img.img--ubi {
+  max-width: 80%; }
+
+form.form--contacto {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 1.5rem; }
+
+select.select--operacion {
+  max-width: 200px; }
+
+@media only screen and (min-width: 992px) {
+  div.div--texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  textarea.textarea--contacto {
+    max-width: 768px; } }
 
 body.broken {
   height: 100vh;

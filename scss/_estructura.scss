@@ -40,7 +40,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     row-gap: 1.5rem;
-    background-image: linear-gradient(to bottom, $blanco 0%, rgb(235, 235, 235) 100%);
+    background-image: linear-gradient(to bottom, $blanco 0%, $gris-claro 100%);
     background-size: contain;
 }
 header {
@@ -115,6 +115,9 @@ ol.listaDecorada li::before{
     content: "\00BB";
     font-size: 2rem;
 }
+li.busca {
+    background-color: $gris-claro;
+}
 div.prop {
     padding-top: 1.5rem;
 }
@@ -133,9 +136,6 @@ section.section--propiedades {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
-section.section--contacto {
-    padding: 1rem 1rem 25rem;
 }
 section.section--welc {
     padding: 0;
@@ -320,7 +320,7 @@ article {
         display: grid;
         grid-template-areas:
          "icono titulo  ."
-         ".  nav  nav";
+         "nav  nav  nav";
         grid-template-columns: 100px auto auto;
         align-content: space-evenly;
         background-color: $naranja-claro;
@@ -343,7 +343,7 @@ article {
         li {
             display:inline-block;
             position: relative;
-            width: 160px;
+            width: 195px;
             padding:1rem 0.5rem;
             background-color: $gris;
             border:3px solid $naranja-claro;
