@@ -1,4 +1,6 @@
 body.broken {
+    background-image: none;
+    background-color: $naranja-puerta;
     height: 100vh;
     display: flex;
     justify-content: space-between;
@@ -9,7 +11,7 @@ section.section--404 {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding-bottom: 3rem;
+    padding: 1rem 1rem 3rem;
 }
 img.img--404 {
     width: 80%;

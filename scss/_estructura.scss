@@ -31,11 +31,10 @@ h4 {
 }
 h5 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
     color: $naranja;
 }
 body {
-    width: 100vw;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-flow: column nowrap;
@@ -169,16 +168,6 @@ $theme-colors:(
     .btn-#{$color} {
       background-color: $value;
     }
-  }
-.footer__titulosPie {
-    display: flex;
-    justify-content: space-between;
-    padding: 0rem 1rem 1rem;
-}
-.footer__iconoSocial {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 1rem;
 }
 .centrarListas ul,
 .centrarListas ol {
@@ -212,14 +201,6 @@ article {
         padding: 1rem;
         display: block;
     }
-}
-#pie {
-    padding: 1rem;
-    border-top: 1px solid $naranja;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.70) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-    background-size: 100% auto;
-    background-position-y: 1rem;
 }
 #lista-o {
     font-weight: 300;
@@ -340,6 +321,8 @@ article {
     nav ul {
         list-style: none;
         font-size: 0;
+        padding-right: 2rem;
+        padding-left: 0rem;
         li {
             display:inline-block;
             position: relative;

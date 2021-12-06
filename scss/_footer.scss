@@ -1,0 +1,89 @@
+#pie {
+    padding: 1rem;
+    border-top: 1px solid $naranja;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.70) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    background-size: 100% auto;
+    background-position-y: 1rem;
+}
+footer.footer--grid {
+    display: grid;
+    grid-template-areas: 
+    "logo redes"
+    "contacto contacto";
+}
+div.logo {
+    grid-area: logo;
+    padding-left: 1rem;
+    color: $blanco;
+}
+div.contacto {
+    grid-area: contacto;
+    color: $blanco;
+    padding-left: 1rem;
+}
+div.redes {
+    grid-area: redes;
+    text-align: right;
+}
+div.info {
+    display: none;
+}
+@media only screen and (min-width: 576px) {
+    footer.footer--grid {
+        display: grid;
+        grid-template-areas: 
+        "logo redes"
+        "info info"
+        "contacto contacto";
+    }
+    div.logo {
+        grid-area: logo;
+        padding-left: 1rem;
+        color: $blanco;
+    }
+    div.contacto {
+        grid-area: contacto;
+        color: $blanco;
+        padding-left: 1rem;
+    }
+    div.redes {
+        grid-area: redes;
+        text-align: right;
+    }
+    div.info {
+        display: block;
+        grid-area: info;
+        padding-left: 1rem;
+        color: $blanco;
+        font-weight: 300;
+    }
+}
+@media only screen and (min-width: 992px) {
+    footer.footer--grid {
+        display: grid;
+        grid-template-areas: 
+        "logo contacto redes"
+        "info  .  . ";
+    }
+    div.logo {
+        grid-area: logo;
+        padding-left: 3rem;
+        color: $blanco;
+    }
+    div.contacto {
+        grid-area: contacto;
+        color: $blanco;
+    }
+    div.redes {
+        grid-area: redes;
+        text-align: center;
+    }
+    div.info {
+        display: block;
+        grid-area: info;
+        padding-left: 3rem;
+        color: $blanco;
+        font-weight: 300;
+    }
+}

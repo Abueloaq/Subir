@@ -31,11 +31,10 @@ h4 {
 
 h5 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #F5842A; }
 
 body {
-  width: 100vw;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-flow: column nowrap;
@@ -165,16 +164,6 @@ img.header__icon {
 .btn-naranja-transp {
   background-color: #f5842a2a; }
 
-.footer__titulosPie {
-  display: flex;
-  justify-content: space-between;
-  padding: 0rem 1rem 1rem; }
-
-.footer__iconoSocial {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem; }
-
 .centrarListas ul,
 .centrarListas ol {
   text-align: left;
@@ -206,14 +195,6 @@ article {
   article a {
     padding: 1rem;
     display: block; }
-
-#pie {
-  padding: 1rem;
-  border-top: 1px solid #F5842A;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
-  background-blend-mode: multiply,multiply;
-  background-size: 100% auto;
-  background-position-y: 1rem; }
 
 #lista-o {
   font-weight: 300;
@@ -305,7 +286,9 @@ article {
     animation-delay: 0s; }
   nav ul {
     list-style: none;
-    font-size: 0; }
+    font-size: 0;
+    padding-right: 2rem;
+    padding-left: 0rem; }
     nav ul li {
       display: inline-block;
       position: relative;
@@ -366,21 +349,23 @@ button.btn-lectura {
 
 section.section--contacto {
   padding: 1rem 1rem;
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem; }
 
 div.div--contacto {
-  max-width: 50%;
+  background-color: #ffecc3;
+  border-radius: 0.75rem;
   padding: 1rem;
   order: 1; }
 
 div.div--contacto--side {
-  max-width: 50%;
+  text-align: center;
   padding: 1rem;
-  border-left: 1px #F5842A;
   order: 2; }
 
-img.img--ubi {
-  max-width: 80%; }
+div.div--texto {
+  width: 90%; }
 
 form.form--contacto {
   display: flex;
@@ -388,18 +373,43 @@ form.form--contacto {
   align-items: center;
   row-gap: 1.5rem; }
 
+img.img--ubi {
+  max-width: 80%; }
+
 select.select--operacion {
   max-width: 200px; }
 
 @media only screen and (min-width: 992px) {
+  section.section--contacto {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem; }
   div.div--texto {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    width: 90%; }
   textarea.textarea--contacto {
-    max-width: 768px; } }
+    width: 75%; }
+  div.div--contacto {
+    width: 50%;
+    padding: 1rem;
+    order: 1; }
+  div.div--contacto--side {
+    width: 50%;
+    padding: 1rem;
+    border-left: 1px #F5842A;
+    order: 2; }
+  form.form--contacto {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 1.5rem; } }
 
 body.broken {
+  background-image: none;
+  background-color: #ff9966;
   height: 100vh;
   display: flex;
   justify-content: space-between;
@@ -410,7 +420,7 @@ section.section--404 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding-bottom: 3rem; }
+  padding: 1rem 1rem 3rem; }
 
 img.img--404 {
   width: 80%; }
@@ -419,5 +429,155 @@ img.img--404 {
   img.img--404 {
     width: 840px; } }
 
+section.section--busca {
+  margin: 0rem 1rem;
+  padding: 1rem;
+  background-image: linear-gradient(120deg, #fdd4b996 0%, #d57eeb96 100%);
+  border-radius: 0.9rem; }
+
+form.form--busca {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem; }
+
+textarea.textarea--busca {
+  width: 75%; }
+
+div.select--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem; }
+
+div.rango--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem; }
+
+div.contacto--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem; }
+
+select.select--busca {
+  width: 250px; }
+
+p.p--radio {
+  display: inline-block; }
+
+@media only screen and (min-width: 992px) {
+  div.select--container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: center; }
+  div.rango--container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center; }
+  div.contacto--container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: center; } }
+
+#pie {
+  padding: 1rem;
+  border-top: 1px solid #F5842A;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background-blend-mode: multiply,multiply;
+  background-size: 100% auto;
+  background-position-y: 1rem; }
+
+footer.footer--grid {
+  display: grid;
+  grid-template-areas: "logo redes" "contacto contacto"; }
+
+div.logo {
+  grid-area: logo;
+  padding-left: 1rem;
+  color: #ffffff; }
+
+div.contacto {
+  grid-area: contacto;
+  color: #ffffff;
+  padding-left: 1rem; }
+
+div.redes {
+  grid-area: redes;
+  text-align: right; }
+
+div.info {
+  display: none; }
+
+@media only screen and (min-width: 576px) {
+  footer.footer--grid {
+    display: grid;
+    grid-template-areas: "logo redes" "info info" "contacto contacto"; }
+  div.logo {
+    grid-area: logo;
+    padding-left: 1rem;
+    color: #ffffff; }
+  div.contacto {
+    grid-area: contacto;
+    color: #ffffff;
+    padding-left: 1rem; }
+  div.redes {
+    grid-area: redes;
+    text-align: right; }
+  div.info {
+    display: block;
+    grid-area: info;
+    padding-left: 1rem;
+    color: #ffffff;
+    font-weight: 300; } }
+
+@media only screen and (min-width: 992px) {
+  footer.footer--grid {
+    display: grid;
+    grid-template-areas: "logo contacto redes" "info  .  . "; }
+  div.logo {
+    grid-area: logo;
+    padding-left: 3rem;
+    color: #ffffff; }
+  div.contacto {
+    grid-area: contacto;
+    color: #ffffff; }
+  div.redes {
+    grid-area: redes;
+    text-align: center; }
+  div.info {
+    display: block;
+    grid-area: info;
+    padding-left: 3rem;
+    color: #ffffff;
+    font-weight: 300; } }
+
 .offcanvas {
   background-color: #f5842a2a; }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+@media only screen and (min-width: 992px) {
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    position: absolute; } }
