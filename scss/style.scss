@@ -36,7 +36,19 @@
         position:absolute;
     }
 }
- 
+div.div--whatsapp {
+    position:fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+	bottom: 30vh;
+	right:40px;
+    z-index: 100;
+}
+p.p--whatsapp {
+    font-size: 1.5rem;
+    color: $naranja;
+}
 
 
 

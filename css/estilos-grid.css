@@ -581,3 +581,16 @@ div.info {
     height: 80%;
     width: 100%;
     position: absolute; } }
+
+div.div--whatsapp {
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  bottom: 30vh;
+  right: 40px;
+  z-index: 100; }
+
+p.p--whatsapp {
+  font-size: 1.5rem;
+  color: #F5842A; }
