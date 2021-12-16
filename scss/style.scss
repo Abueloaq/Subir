@@ -41,13 +41,16 @@ div.div--whatsapp {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-	bottom: 30vh;
-	right:40px;
-    z-index: 100;
+	top: (0px + header);
+	right: 5px;
+    z-index: 10000;
 }
 p.p--whatsapp {
     font-size: 1.5rem;
     color: $naranja;
+    padding: 0.25rem 0.5rem;
+    background-color: $blanco;
+    border-radius: 5px;
 }
 
 
