@@ -10,12 +10,12 @@ a:link, a:visited, a:active {
   color: inherit; }
 
 h1 {
-  color: #F5842A;
+  color: #ffffff;
   text-align: left;
-  letter-spacing: 0.75rem; }
+  letter-spacing: 0rem; }
 
 h2 {
-  color: #0091A8;
+  color: #464646;
   text-align: center;
   font-size: 3rem;
   font-weight: 300; }
@@ -25,14 +25,14 @@ h3 {
   font-size: 2.5rem; }
 
 h4 {
-  color: #792600;
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 1.8rem;
   font-weight: 300; }
 
 h5 {
   font-size: 2rem;
   font-weight: 300;
-  color: #F5842A; }
+  color: #EC9B16; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -46,7 +46,7 @@ header {
   width: 100%;
   display: grid;
   grid-template-areas: "icono titulo nav";
-  background-color: #fdd4b9; }
+  background-color: #EC9B16; }
   header h1.header__titulo {
     grid-area: titulo;
     text-align: center;
@@ -54,7 +54,7 @@ header {
   header a.header__icono {
     grid-area: icono;
     align-self: center;
-    padding: 0.5rem; }
+    padding: 0rem; }
   header nav.header__nav {
     grid-area: nav;
     text-align: center; }
@@ -103,9 +103,6 @@ ol.listaDecorada li::before {
   content: "\00BB";
   font-size: 2rem; }
 
-li.busca {
-  background-color: #ebebeb; }
-
 div.prop {
   padding-top: 1.5rem; }
 
@@ -114,6 +111,10 @@ div.centrado {
 
 section.section {
   padding: 2rem; }
+
+section.section--opciones {
+  background-color: #1f1f1f;
+  padding-left: 0px; }
 
 section.section--quienes {
   display: flex;
@@ -126,7 +127,11 @@ section.section--propiedades {
   justify-content: space-evenly; }
 
 section.section--welc {
-  padding: 0; }
+  display: flex;
+  flex-flow: column nowrap;
+  height: 85vh;
+  justify-content: space-around;
+  padding-top: 4rem; }
 
 img.imgChica {
   width: 90vw; }
@@ -199,7 +204,8 @@ article {
 #lista-o {
   font-weight: 300;
   font-size: 2rem;
-  color: #792600; }
+  color: #ff7f50;
+  text-align: right; }
 
 @media only screen and (min-width: 576px) {
   header {
@@ -208,7 +214,7 @@ article {
     grid-template-areas: "icono titulo  nav";
     grid-template-columns: 100px auto auto;
     align-content: space-evenly;
-    background-color: #fdd4b9; }
+    background-color: #EC9B16; }
     header a.header__icono {
       grid-area: icono; }
     header h1.header__titulo {
@@ -273,7 +279,7 @@ article {
     grid-template-areas: "icono titulo  ." "nav  nav  nav";
     grid-template-columns: 100px auto auto;
     align-content: space-evenly;
-    background-color: #fdd4b9; }
+    background-color: #EC9B16; }
     header h1.header__titulo {
       grid-area: titulo;
       padding-top: 0;
@@ -285,18 +291,20 @@ article {
     animation-duration: 2s;
     animation-delay: 0s; }
   nav ul {
+    position: relative;
+    bottom: -10px;
     list-style: none;
     font-size: 0;
-    padding-right: 2rem;
+    padding-right: 0rem;
     padding-left: 0rem; }
     nav ul li {
       display: inline-block;
       position: relative;
-      width: 195px;
-      padding: 1rem 0.5rem;
-      background-color: #b8b8b8;
-      border: 3px solid #fdd4b9;
-      border-radius: 0.75rem;
+      width: 20%;
+      padding: 0.2rem 0.5rem;
+      background-color: #464646;
+      border: 0px;
+      border-radius: 0;
       text-align: center;
       transition: all 0.3s; }
       nav ul li ul {
@@ -304,10 +312,12 @@ article {
         display: none; }
     nav ul ul li {
       display: block;
+      color: #ffffff;
+      width: 200px;
       font-size: 1.5rem;
       z-index: 10; }
     nav ul li:hover {
-      background-color: #ffecc3; }
+      background-color: #ff9966; }
     nav ul li:hover ul {
       display: block; }
   section.section--quienes {
@@ -399,7 +409,7 @@ select.select--operacion {
   div.div--contacto--side {
     width: 50%;
     padding: 1rem;
-    border-left: 1px #F5842A;
+    border-left: 1px #EC9B16;
     order: 2; }
   form.form--contacto {
     display: flex;
@@ -483,7 +493,7 @@ p.p--radio {
 
 #pie {
   padding: 1rem;
-  border-top: 1px solid #F5842A;
+  border-top: 1px solid #EC9B16;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
   background-blend-mode: multiply,multiply;
   background-size: 100% auto;
@@ -593,7 +603,7 @@ div.div--whatsapp {
 
 p.p--whatsapp {
   font-size: 1.5rem;
-  color: #F5842A;
+  color: #EC9B16;
   padding: 0.25rem 0.5rem;
   background-color: #ffffff;
   border-radius: 5px; }
