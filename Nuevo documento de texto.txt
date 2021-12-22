@@ -1,4 +1,4 @@
-cambiar propiedad Article
-rediseñar carousel
+cambiar propiedad Article /--
+ajustar tamaños de imagen carousel*****
 agregar boton whatsapp //
-areglar scss boton whatsapp
+areglar scss boton whatsapp *******

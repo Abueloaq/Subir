@@ -8,50 +8,8 @@
 .offcanvas {
     background-color: $naranja-transp;
 }
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-@media only screen and (min-width: 992px) {
-    .map-responsive{
-        overflow:hidden;
-        padding-bottom:56.25%;
-        position:relative;
-        height:0;
-    }
-    .map-responsive iframe{
-        left:0;
-        top:0;
-        height:80%;
-        width:100%;
-        position:absolute;
-    }
-}
-div.div--whatsapp {
-    position:fixed;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-	top: (0px + header);
-	right: 5px;
-    z-index: 10000;
-}
-p.p--whatsapp {
-    font-size: 1.5rem;
-    color: $naranja;
-    padding: 0.25rem 0.5rem;
-    background-color: $blanco;
-    border-radius: 5px;
-}
+
+
 
 
 
