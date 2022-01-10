@@ -26,40 +26,33 @@
             <ul>
                 <li><a href="../index.html"><h4>Inicio</h4></a></li>
                 <li><a href="quienes_somos.html"><h4>Quienes Somos</h4></a></li>
-                <li><a href="propiedades.html"><h4>Propiedades</h4></a>
-                    <ul>
-                        <li><a href="green_village_003.html">Edificio Green Village</a></li>
-                        <li><a href="parquemar_1304.html">Edificio Parquemar</a></li>
-                        <li><a href="stradivarius_302.html">Edificio Stradivarius</a></li>
-                    </ul>
-                </li>
-                <li><a href="contacto.html"><h4>Contacto</h4></a></li>
-                <li class="busca"><a href="busca_propiedad.html"><h4 class="textoPesado">Busca tu Propiedad</h4></a></li>
+                <li><a href="propiedades.html"><h4>Propiedades</h4></a></li>
+                <li class="li--activa"><a href="contacto.html"><h4>Contacto</h4></a></li>
             </ul>
             </div>
         </nav>
     </header>
     <section class="section section--contacto">
-        <div class="div--whatsapp--contacto">
-            <a href="https://wa.me/59898819019?text=Quiero%20obtener%20asesoramiento%20personalizado"><img src="../images/whatsapp-logo.png" width=60px></a>
-            <p class="p--whatsapp">Contáctanos</p>
-        </div>
         <div class="div--contacto--side">
             <h3>ABarcelo Propiedades</h3>
+            <div class="div--whatsapp--contacto">
+                <a href="https://wa.me/59898819019?text=Quiero%20obtener%20asesoramiento%20personalizado"><img src="../images/whatsapp-logo.png" width=60px>
+                <p class="p--whatsapp--contacto">Contáctanos</p></a>
+            </div>
             <p class="texto--lectura">42263269</p>
-            <p class="texto--lectura">contacto@abarcelo.com.uy</p>
+            <p class="texto--lectura">adriana.abarcelo@gmail.com</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.851926801853!2d-54.964707984194!3d-34.91016528128497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x957510778d84e5a1%3A0x1b754805f781be6e!2sTorres%20Barcelona!5e0!3m2!1ses-419!2suy!4v1638806907533!5m2!1ses-419!2suy" width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="container-lg div--contacto">
         <h2>Contacto</h2>
-        <form class="texto--formulario form--contacto textoCentrado" action="gracias.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <form id="form" class="texto--formulario form--contacto textoCentrado" action="https://formspree.io/f/xzboznbd" method="post">
             <div class="form-group">
-            <label for="nombre_apellido">Nombre Completo:</label>
-            <input type="text" name="nombre_apellido">
+            <label for="name">Nombre Completo:</label>
+            <input required type="text" id="name" name="name">
             </div>
             <div class="form-group">
             <label for="email">Correo Electrónico:</label>
-            <input type="text" name="email">
+            <input required type="email" id="email" name="email">
             </div>
             <h5>Operación:</h5>
             <select name="operacion" class="select--operacion">
@@ -70,18 +63,14 @@
             </select>
             <div class="form-group div--texto">
                 <label for="comentarios">Comentarios</label>
-                <textarea class="textarea--contacto form-control" id="comentarios" rows="8"></textarea>
-            </div>
-            <div>
-            <p>Desea recibir nuestras novedades?</p>
-            Si
-            <input type="checkbox" name="si" value="1">
+                <textarea class="textarea--contacto form-control" name="message" id="comentarios" rows="8"></textarea>
             </div>
             <div>
             <button type="reset" class="btn btn-naranja btn-lectura">Limpiar</button>
             <button type="submit" class="btn btn-naranja btn-lectura">Enviar</button>
             </div>
         </form>
+        <a href="mailto:adriana.abarcelo@gmail.com" id="trucazo"></a>
         </div>
     </section>
     <footer id="pie" class="footer--grid texto--lectura">
@@ -92,7 +81,7 @@
         <div class="info">
             <p>Joaquin de Viana Edif. Torres Barcelona 101A</p>
             <p>42263269</p>
-            <p>contacto@abarcelo.com.uy</p>
+            <p>adriana.abarcelo@gmail.com</p>
         </div>
         <div class="contacto">
             <a href="../pages/contacto.html">
@@ -107,5 +96,27 @@
     </footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="../js/bootstrap.bundle.js"></script>
+    <script>
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#trucazo')
+
+        $form.addEventListener('submit', handleSubmit)
+
+        async function handleSubmit(event) {
+            event.preventDefault ()
+            const form = new FormData(this)
+            const response = await fetch(this.action, {
+                method: this.method,
+                body: form,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            if (response.ok) {
+                this.reset()
+                alert('Gracias por tu mensaje, recibiras nuestra respuesta a la brevedad')
+            }
+        }
+    </script>
 </body>
 </html>

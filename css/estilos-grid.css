@@ -82,21 +82,28 @@ nav ul {
   nav ul li:hover ul {
     display: block; }
 
+li.li--activa {
+  background-color: #b8b8b8; }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
 div.div--whatsapp {
   position: fixed;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   top: 0pxheader;
-  right: 5px;
-  z-index: 10000; }
-
-div.div--whatsapp--contacto {
-  position: fixed;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  top: 150px;
   right: 5px;
   z-index: 10000; }
 
@@ -328,7 +335,7 @@ article {
     nav ul li {
       display: inline-block;
       position: relative;
-      width: 20%;
+      width: 25%;
       padding: 0.2rem 0.5rem;
       background-color: #464646;
       border: 0px;
@@ -353,6 +360,17 @@ article {
     display: grid;
     grid-template-areas: "conoce conoce conoce" "img  .  texto" ".  .  .";
     grid-template-rows: auto auto 250px; }
+  .map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0; }
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    position: absolute; }
   h2.conoce {
     grid-area: conoce; }
   div.img {
@@ -383,6 +401,9 @@ article {
   img.imgChica {
     width: 400px; } }
 
+#trucazo {
+  opacity: 0; }
+
 button.btn-lectura {
   font-size: 2rem; }
 
@@ -391,6 +412,16 @@ section.section--contacto {
   display: flex;
   flex-direction: column;
   row-gap: 2rem; }
+
+p.p--whatsapp--contacto {
+  font-size: 2rem;
+  color: #EC9B16; }
+
+div.div--whatsapp--contacto {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline; }
 
 div.div--contacto {
   background-color: #ffecc3;
@@ -600,29 +631,3 @@ div.info {
 
 .offcanvas {
   background-color: #f5842a2a; }
-
-.map-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0; }
-
-.map-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute; }
-
-@media only screen and (min-width: 992px) {
-  .map-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0; }
-  .map-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 80%;
-    width: 100%;
-    position: absolute; } }
